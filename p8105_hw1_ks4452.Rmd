@@ -1,0 +1,12 @@
+---
+title: "Homework 1"
+author: "Karthika Shankar"
+date: "2026-09-26"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+```
+
+
