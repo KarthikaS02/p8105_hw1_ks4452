@@ -17,7 +17,7 @@ data("penguins", package = "palmerpenguins")
 
 The `penguins` dataset contains information on penguins, including species, island, bill length, bill depth, flipper length, body mass, sex, and year. The species in the dataset include Adelie, Chinstrap, and Gentoo penguins, and the islands include Biscoe, Dream, and Torgersen. The dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns. The mean flipper length is `r mean(penguins$flipper_length_mm, na.rm = TRUE)` mm.
 
-```{r penguins_scatterplot}
+```{r penguins_scatterplot, warning = FALSE, message = FALSE}
 ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) +
   geom_point()
 
@@ -39,7 +39,7 @@ problem2_df = tibble(
 problem2_df
 ```
 
-```{r problem2_means}
+```{r problem2_means, warning = FALSE}
 mean(pull(problem2_df, random_sample))
 mean(pull(problem2_df, positive))
 mean(pull(problem2_df, character_vector))
